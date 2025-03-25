@@ -9,10 +9,10 @@ public class Main {
         //Площадь круга - импорт константы, сканера + округление
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите радиус окружности: ");
-        double radius3 = sc.nextDouble();
-        double S3 = radius3 * radius3 * Math.PI;
-        double roundedS3 = Math.round(S3 * 100.0) / 100.0;
-        System.out.printf("Круг радиусом R=%s имеет площадь S=%s", radius3, roundedS3);
+        double radius = sc.nextDouble();
+        double square = radius * radius * Math.PI;
+        double roundedSquare = Math.round(square * 100.0) / 100.0;
+        System.out.printf("Круг радиусом R=%s имеет площадь S=%s", radius, roundedSquare);
 
         //для удобства просмотра в консоли
         System.out.println();
@@ -21,11 +21,11 @@ public class Main {
         //Задание №2
         //Перевод из градусов Цельсия в Фаренгейты - импорт сканера + округление
         System.out.print("Введите температуру в градусах Цельсия: ");
-        //переиспользую переменную sc
-        double cels = sc.nextDouble();
-        double fahr = cels * 9 / 5 + 32;
-        double roundedfahr = Math.round(fahr * 100.0) / 100.0;
-        System.out.printf("По шкале Фаренгейта это %s градусов.", roundedfahr);
+        //переиспользую сканнер sc
+        double celsius = sc.nextDouble();
+        double fahrenheit = celsius * 9 / 5 + 32;
+        double roundedFahrenheit = Math.round(fahrenheit * 100.0) / 100.0;
+        System.out.printf("По шкале Фаренгейта это %s градусов.", roundedFahrenheit);
 
         //для удобства просмотра в консоли
         System.out.println();
@@ -33,14 +33,15 @@ public class Main {
 
         //Задание №3
         //Длина строки "Hello" - импорт сканера, if
-        String wordone = "Hello";
+        Scanner sc2 = new Scanner(System.in);
+        String wordOne = "Hello";
         System.out.print("Введите строку текста, равную по длине строке 'Hello': ");
-        String wordtwo = sc2.nextLine(); //переиспользую переменную sc2
-        if (wordtwo.length() == wordone.length()) {
+        String wordTwo = sc2.nextLine();
+        if (wordTwo.length() == wordOne.length()) {
             System.out.println("Верно! Эти строки равны по длине.");
             }
         else {
-            System.out.println("Не верно! Вы ошиблись в подсчете букв =)");
+            System.out.println("Не верно! Вы ошиблись в подсчете букв.");
         }
 
         //для удобства просмотра в консоли
@@ -49,7 +50,7 @@ public class Main {
         //Задание №4 Високосный год
         System.out.println("Давайте определим, является ли год високосным? ");
         System.out.print("Введите интересующий вас год в формате yyyy: ");
-        //переиспользую переменную sc
+        //переиспользую сканнер sc
         int year = sc.nextInt();
         System.out.printf("Результат проверки: %s", year % 4 == 0);
 
@@ -60,15 +61,15 @@ public class Main {
         //Задание №5 Калькулятор ИМТ + сканер + перевод в м + округление
         Scanner sc3 = new Scanner(System.in);
         System.out.print("Давайте определим ИМТ. Введите вес человека в кг: ");
-        //переиспользую переменную sc
+        //переиспользую скеннер sc
         int ves = sc.nextInt();
         System.out.print("Теперь введите рост человека в см: ");
         //перевод в метры сразу
         double rost = sc3.nextInt() / 100.0;
         double imt = ves / (rost * rost);
         //округление
-        double roundedimt = Math.round(imt * 100.0) / 100.0;
-        System.out.printf("ИМТ равен: %s", roundedimt);
+        double roundedImt = Math.round(imt * 100.0) / 100.0;
+        System.out.printf("ИМТ равен: %s", roundedImt);
 
         //Отбивка для пользователя
         System.out.println();
@@ -115,19 +116,21 @@ public class Main {
         //Задание №10. Вывод в консоль смайлика
         System.out.println();
         System.out.println("Смайлик");
-        System.out.println("8-)");
+        System.out.println(" О   О");
+        System.out.println("   |");
+        System.out.println("*  _  *");
+        System.out.println(" *****");
 
-        /**
-         // Урок 2.
-         public class Main {
-         public static void main(String[] args) {
-         System.out.println("Hello world!");
 
-         //1
-         int age = 12;
-         double wallet = 10.50;
-         boolean isSchoolBoy = true;
-         char grade = 'A';
+        // Работа на лекции. Урок 2.
+        System.out.println();
+        System.out.println("Hello world!");
+
+        //1
+        int age = 12;
+        double wallet = 10.50;
+        boolean isSchoolBoy = true;
+        char grade = 'A';
 
         //2
         String name = "Иванов Иван";
@@ -137,15 +140,15 @@ public class Main {
         System.out.println(name.charAt(1));
 
         //3
-        System.out.println(10+15);
-        System.out.println(10-2);
-        System.out.println(2*2);
-        System.out.println(10/5);
+        System.out.println(10 + 15);
+        System.out.println(10 - 2);
+        System.out.println(2 * 2);
+        System.out.println(10 / 5);
 
-        System.out.println(10/3);
-        System.out.println(10.0/3.0);
+        System.out.println(10 / 3);
+        System.out.println(10.0 / 3.0);
 
-        System.out.println(10%3);
+        System.out.println(10 % 3);
 
         System.out.println("a" + "b");
 
@@ -166,7 +169,7 @@ public class Main {
          * привет
          * привет
          */
-        /**
+
         System.out.println("Привет, я " + name + "! Мне " + age + " лет.");
         System.out.printf("Привет, я %s! Мне %s лет.", name, age);
 
@@ -178,8 +181,5 @@ public class Main {
         System.out.println("  *");
         System.out.println(" ***");
         System.out.println("*****");
-        */
-
-
     }
 }
