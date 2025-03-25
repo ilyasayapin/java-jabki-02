@@ -6,57 +6,33 @@ public class Main {
 
         //Урок 2. Выполнение ДЗ
         //Задание №1
-        //Площадь круга вариант 1
-        double radius1 = 10;
-        double pi = 3.14;
-        double S1 = radius1 * radius1 * pi;
-        System.out.println(S1);
-
-        System.out.println(); //для удобства просмотра в консоли
-
-        //Площадь круга вариант 2 - импорт константы PI
-        double radius2 = 100;
-        double S2 = radius2 * radius2 * Math.PI;
-        System.out.printf("Круг радиусом R=%s имеет площадь S=%s", radius2, S2);
-
-        System.out.println(); //для удобства просмотра в консоли
-        System.out.println(); //для удобства просмотра в консоли
-
-        //Площадь круга вариант 3 - импорт константы, сканера + округление
+        //Площадь круга - импорт константы, сканера + округление
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите радиус окружности: ");
         double radius3 = sc.nextDouble();
         double S3 = radius3 * radius3 * Math.PI;
-        double roundedS3 = Math.round(S3 * 100.0) / 100.0; //округление
+        double roundedS3 = Math.round(S3 * 100.0) / 100.0;
         System.out.printf("Круг радиусом R=%s имеет площадь S=%s", radius3, roundedS3);
 
-        System.out.println(); //для удобства просмотра в консоли
-        System.out.println(); //для удобства просмотра в консоли
+        //для удобства просмотра в консоли
+        System.out.println();
+        System.out.println();
 
         //Задание №2
         //Перевод из градусов Цельсия в Фаренгейты - импорт сканера + округление
         System.out.print("Введите температуру в градусах Цельсия: ");
-        double cels = sc.nextDouble(); //переиспользую переменную sc
+        //переиспользую переменную sc
+        double cels = sc.nextDouble();
         double fahr = cels * 9 / 5 + 32;
         double roundedfahr = Math.round(fahr * 100.0) / 100.0;
         System.out.printf("По шкале Фаренгейта это %s градусов.", roundedfahr);
 
-        System.out.println(); //для удобства просмотра в консоли
-        System.out.println(); //для удобства просмотра в консоли
+        //для удобства просмотра в консоли
+        System.out.println();
+        System.out.println();
 
         //Задание №3
-        //Длина строки "Hello" вариант 1 - true|false
-        Scanner sc2 = new Scanner(System.in);
-        String wordthree = "Hello";
-        System.out.println("Посчитай число букв в слове 'Hello'");
-        System.out.print("Введите строку текста, равную по длине строке 'Hello': ");
-        String wordfour = sc2.nextLine();
-        System.out.printf("Эти строки имеют равную длину? %s", wordthree.length() == wordfour.length());
-
-        System.out.println(); //для удобства просмотра в консоли
-        System.out.println(); //для удобства просмотра в консоли
-
-        //Длина строки "Hello" вариант 2 - импорт сканера, if
+        //Длина строки "Hello" - импорт сканера, if
         String wordone = "Hello";
         System.out.print("Введите строку текста, равную по длине строке 'Hello': ");
         String wordtwo = sc2.nextLine(); //переиспользую переменную sc2
@@ -65,27 +41,33 @@ public class Main {
             }
         else {
             System.out.println("Не верно! Вы ошиблись в подсчете букв =)");
-
         }
-        System.out.println(); //для удобства просмотра в консоли
+
+        //для удобства просмотра в консоли
+        System.out.println();
 
         //Задание №4 Високосный год
         System.out.println("Давайте определим, является ли год високосным? ");
         System.out.print("Введите интересующий вас год в формате yyyy: ");
-        int year = sc.nextInt(); //переиспользую переменную sc
+        //переиспользую переменную sc
+        int year = sc.nextInt();
         System.out.printf("Результат проверки: %s", year % 4 == 0);
 
-        System.out.println(); //для удобства просмотра в консоли
+        //для удобства просмотра в консоли
+        System.out.println();
         System.out.println();
 
         //Задание №5 Калькулятор ИМТ + сканер + перевод в м + округление
         Scanner sc3 = new Scanner(System.in);
         System.out.print("Давайте определим ИМТ. Введите вес человека в кг: ");
-        int ves = sc.nextInt(); //переиспользую переменную sc
+        //переиспользую переменную sc
+        int ves = sc.nextInt();
         System.out.print("Теперь введите рост человека в см: ");
-        double rost = sc3.nextInt() / 100.0; //перевод в метры сразу
-        double imt = ves / (rost*rost);
-        double roundedimt = Math.round(imt * 100.0) / 100.0; //округление
+        //перевод в метры сразу
+        double rost = sc3.nextInt() / 100.0;
+        double imt = ves / (rost * rost);
+        //округление
+        double roundedimt = Math.round(imt * 100.0) / 100.0;
         System.out.printf("ИМТ равен: %s", roundedimt);
 
         //Отбивка для пользователя
