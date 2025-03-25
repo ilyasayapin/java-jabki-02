@@ -45,7 +45,7 @@ public class Main {
         Scanner sc2 = new Scanner(System.in);
         String wordthree = "Hello";
         System.out.println("Посчитай число букв в слове 'Hello'");
-        System.out.println("Введите строку текста, равную по длине строке 'Hello': ");
+        System.out.print("Введите строку текста, равную по длине строке 'Hello': ");
         String wordfour = sc2.nextLine();
         System.out.printf("Эти строки имеют равную длину? %s", wordthree.length() == wordfour.length());
         System.out.println(""); //для удобства просмотра в консоли
@@ -53,7 +53,7 @@ public class Main {
 
         //Длина строки "Hello" вариант 2 - импорт сканера, if
         String wordone = "Hello";
-        System.out.println("Введите строку текста, равную по длине строке 'Hello': ");
+        System.out.print("Введите строку текста, равную по длине строке 'Hello': ");
         String wordtwo = sc2.nextLine(); //переиспользую переменную sc2
         if (wordtwo.length() == wordone.length()) {
             System.out.println("Верно! Эти строки равны по длине.");
@@ -66,7 +66,7 @@ public class Main {
 
         //Задание №4 Високосный год
         System.out.println("Давайте определим, является ли год високосным? ");
-        System.out.println("Введите интересующий вас год в формате yyyy: ");
+        System.out.print("Введите интересующий вас год в формате yyyy: ");
         int year = sc.nextInt(); //переиспользую переменную sc
         System.out.printf("Результат проверки: %s", year % 4 == 0);
         System.out.println(""); //для удобства просмотра в консоли
@@ -74,13 +74,23 @@ public class Main {
 
         //Задание №5 Калькулятор ИМТ + сканер + перевод в м + округление
         Scanner sc3 = new Scanner(System.in);
-        System.out.println("Давайте определим ИМТ. Введите вес человека в кг: ");
+        System.out.print("Давайте определим ИМТ. Введите вес человека в кг: ");
         int ves = sc.nextInt(); //переиспользую переменную sc
-        System.out.println("Теперь введите рост человека в см: ");
+        System.out.print("Теперь введите рост человека в см: ");
         double rost = sc3.nextInt() / 100.0; //перевод в метры сразу
         double imt = ves / (rost*rost);
         double roundedimt = Math.round(imt * 100.0) / 100.0; //округление
         System.out.printf("ИМТ равен: %s", roundedimt);
+
+       //Задание №6 Таблица истинности для операторов && и ||
+        System.out.println();
+        System.out.println();
+        System.out.println("Таблица истинности");
+        System.out.println("A   B   A&B   A||B");
+        System.out.println("0   0    0     0");
+        System.out.println("1   0    0     1");
+        System.out.println("0   1    0     1");
+        System.out.println("1   1    1     1");
 
 
         /**
