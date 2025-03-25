@@ -1,5 +1,4 @@
 import java.lang.Math;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -26,7 +25,7 @@ public class Main {
         System.out.print("Введите радиус окружности: ");
         double radius3 = sc.nextDouble();
         double S3 = radius3 * radius3 * Math.PI;
-        double roundedS3 = Math.round(S3 * 100.0) / 100.0;
+        double roundedS3 = Math.round(S3 * 100.0) / 100.0; //округление
         System.out.printf("Круг радиусом R=%s имеет площадь S=%s", radius3, roundedS3);
         System.out.println(""); //для удобства просмотра в консоли
         System.out.println(""); //для удобства просмотра в консоли
@@ -34,7 +33,7 @@ public class Main {
         //Задание №2
         //Перевод из градусов Цельсия в Фаренгейты - импорт сканера + округление
         System.out.print("Введите температуру в градусах Цельсия: ");
-        double cels = sc.nextDouble();
+        double cels = sc.nextDouble(); //переиспользую переменную sc
         double fahr = cels * 9 / 5 + 32;
         double roundedfahr = Math.round(fahr * 100.0) / 100.0;
         System.out.printf("По шкале Фаренгейта это %s градусов.", roundedfahr);
@@ -55,7 +54,7 @@ public class Main {
         //Длина строки "Hello" вариант 2 - импорт сканера, if
         String wordone = "Hello";
         System.out.println("Введите строку текста, равную по длине строке 'Hello': ");
-        String wordtwo = sc2.nextLine();
+        String wordtwo = sc2.nextLine(); //переиспользую переменную sc2
         if (wordtwo.length() == wordone.length()) {
             System.out.println("Верно! Эти строки равны по длине.");
             }
@@ -66,15 +65,22 @@ public class Main {
         System.out.println(""); //для удобства просмотра в консоли
 
         //Задание №4 Високосный год
-        Scanner sc3 = new Scanner(System.in);
         System.out.println("Давайте определим, является ли год високосным? ");
         System.out.println("Введите интересующий вас год в формате yyyy: ");
-        int year = sc3.nextInt();
+        int year = sc.nextInt(); //переиспользую переменную sc
         System.out.printf("Результат проверки: %s", year % 4 == 0);
+        System.out.println(""); //для удобства просмотра в консоли
+        System.out.println("");
 
-
-
-
+        //Задание №5 Калькулятор ИМТ + сканер + перевод в м + округление
+        Scanner sc3 = new Scanner(System.in);
+        System.out.println("Давайте определим ИМТ. Введите вес человека в кг: ");
+        int ves = sc.nextInt(); //переиспользую переменную sc
+        System.out.println("Теперь введите рост человека в см: ");
+        double rost = sc3.nextInt() / 100.0; //перевод в метры сразу
+        double imt = ves / (rost*rost);
+        double roundedimt = Math.round(imt * 100.0) / 100.0; //округление
+        System.out.printf("ИМТ равен: %s", roundedimt);
 
 
         /**
