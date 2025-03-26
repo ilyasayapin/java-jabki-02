@@ -39,8 +39,7 @@ public class Main {
         String wordTwo = sc2.nextLine();
         if (wordTwo.length() == wordOne.length()) {
             System.out.println("Верно! Эти строки равны по длине.");
-            }
-        else {
+        } else {
             System.out.println("Не верно! Вы ошиблись в подсчете букв.");
         }
 
@@ -75,7 +74,7 @@ public class Main {
         System.out.println();
         System.out.println();
         System.out.println("Немного порисуем? Введите yes or yes:");
-        String x = sc2.nextLine();
+        sc2.nextLine();
 
         //Задание №6 Таблица истинности для операторов && и ||
         System.out.println();
@@ -168,7 +167,7 @@ public class Main {
         /**
          * привет
          * привет
-         */
+        */
 
         System.out.println("Привет, я " + name + "! Мне " + age + " лет.");
         System.out.printf("Привет, я %s! Мне %s лет.", name, age);
@@ -181,5 +180,8 @@ public class Main {
         System.out.println("  *");
         System.out.println(" ***");
         System.out.println("*****");
+
+
+
     }
 }
